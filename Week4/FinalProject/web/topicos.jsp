@@ -12,6 +12,6 @@
         <title>Sucesso</title>
     </head>
     <body>
-        <h1>Tela de tópicos</h1>
+        <h1>Bem vindo, ${name}.</h1>
     </body>
 </html>

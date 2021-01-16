@@ -16,13 +16,13 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String login = request.getParameter("login");
-        String senha = request.getParameter("senha");
+        String login = request.getParameter("inputLogin");
+        String senha = request.getParameter("inputPassword");
 
         Authenticator a = new Authenticator();
         try {
             String nomeUsuario = a.Autenticar(login, senha);
-            request.setAttribute("nome", nomeUsuario);
+            request.setAttribute("name", nomeUsuario);
             request.getRequestDispatcher("topicos.jsp").forward(request,response);
         } catch (Exception ex) {
             request.setAttribute("erro", ex.getMessage());
