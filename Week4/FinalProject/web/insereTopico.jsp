@@ -16,6 +16,7 @@
             <div class="col-2"></div>
             <div class="col-8">
                 <form method="POST" action="InsereTopicoServlet">
+                    <input type="hidden" name="loginUser" value=${login}>
                     <br>
                     <p class="h4 fw-bold text-center">Inserir novo tópico</p>
                     <div class="mb-3">

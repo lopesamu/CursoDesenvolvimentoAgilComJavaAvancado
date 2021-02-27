@@ -22,6 +22,7 @@ public class LoginServlet extends HttpServlet {
         Authenticator a = new Authenticator();
         try {
             String nomeUsuario = a.Autenticar(login, senha);
+            request.setAttribute("login", login);
             request.setAttribute("name", nomeUsuario);
             request.getRequestDispatcher("topicos.jsp").forward(request,response);
         } catch (Exception ex) {

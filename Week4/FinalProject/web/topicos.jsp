@@ -18,7 +18,10 @@
                 <p class="fs-3 text-center fw-bold">Bem vindo, ${name}.</p>
                 <p class="fs-4 text-center">Todos os tópicos</p>
                 <div class="d-grid gap-2">
-                    <a type="button" class="btn btn-outline-primary" href="insereTopico.jsp">Inserir novo tópico</a>
+                    <form method="POST" action="TopicosServlet">
+                        <input type="hidden" name="loginUser" value=${login}>
+                        <button type="submit" class="btn btn-primary">Inserir Tópico</button>
+                    </form>
                     <a type="button" class="btn btn-outline-primary" href="ranking.jsp">Ranking</a>
                 </div>
                 <div class="list-group">
